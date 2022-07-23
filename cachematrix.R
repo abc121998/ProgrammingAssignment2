@@ -7,7 +7,9 @@ makeCacheMatrix <- function(x = matrix()) {
         
         #changes the original matrix to a new one and nulls the set inverse
         set <- function(y){
+                #sets x in the parent env to the inputted matrix (caches it)
                 x <<- y
+                #removes the cached inverse matrix
                 i <<- NULL
         }
         
